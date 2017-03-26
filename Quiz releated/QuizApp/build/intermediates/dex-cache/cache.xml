@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\H.P\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.3.1\be29b24233711c419ce935aa0a1b12ebc49d1c9a\firebase-client-android-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
+        <dex dex="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\10\firebase-client-android-2.3.1_5f514b5feb9e2acd600be901548be646bc495d9c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78bd56b45adf3dfc9b4c979d7036c7833411c2b7">
+        <dex dex="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_54cfdfc042b0bc7c9c736f5693e0dbf2e1922026\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\H.P\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.11\d37cb67277928cf59344b4196af8d9cee1f1a27c\tubesock-0.0.11.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\10\tubesock-0.0.11_72cbdf017310121183a188c9b8cc40bc017e67ec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\H.P\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.3.1\4d53b7d6983247af02b8fe7e4228fff555a5e828\firebase-client-jvm-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
+        <dex dex="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\10\firebase-client-jvm-2.3.1_eec3026695b07941d96dceb67dcabbea39742b10\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\H.P\Documents\GitHub\MathsQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1ca2d02554aec39eb6314fc63703f8c2a37b17bf\classes.dex" />
+    </item>
+
+</items>
