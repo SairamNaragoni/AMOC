@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="add">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/svnit_logo_starting_screen"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/splash_iv"
+        android:layout_centerVertical="true"
+        android:padding="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_tv_text"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/splash_tv"
+        android:layout_below="@id/splash_iv"
+        android:padding="8dp"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/circular_progress_view"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/splash_tv"/>
+
+</RelativeLayout>
