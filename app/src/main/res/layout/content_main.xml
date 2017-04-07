@@ -19,14 +19,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/textView2"
+<<<<<<< HEAD
         android:layout_marginTop="26dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+=======
+        android:layout_below="@+id/onClick3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
+>>>>>>> origin/master
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:onClick="qrScanner"
         android:text="QR Scanner"
         tools:layout_editor_absoluteX="147dp"
@@ -58,5 +65,34 @@
         Your Aim is to Answer question Correctly and Follow the redirected Location
         After Going to That Location Search For the QRcode and Scan it."
         android:textSize="18sp" />
+=======
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="44dp"
+        android:onClick="qrScanner"
+        android:text="QR Scanner"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <Button
+        android:id="@+id/onClick3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toEndOf="@+id/button3"
+        android:onClick="logOut"
+        android:text="logout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="startGame"
+        android:text="START" />
+>>>>>>> origin/master
 
 </RelativeLayout>

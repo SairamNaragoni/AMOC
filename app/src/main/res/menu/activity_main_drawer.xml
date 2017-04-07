@@ -7,10 +7,13 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />
         <item
+<<<<<<< HEAD
             android:id="@+id/nav_rules"
             android:icon="@drawable/common_full_open_on_phone"
             android:title="RULES"/>
         <item
+=======
+>>>>>>> origin/master
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />

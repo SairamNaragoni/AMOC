@@ -58,8 +58,13 @@ public class Authentication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+<<<<<<< HEAD
                // mProgressDialog.setTitle("Signing Up...");
                 mProgressDialog.show(Authentication.this,"Signing Up....","Processing....",true);
+=======
+                mProgressDialog.setTitle("Signing Up...");
+                mProgressDialog.show();
+>>>>>>> origin/master
 
                 final String name = mNameEditText.getText().toString().trim();
                 final String mobileNo = mMobileNoEditText.getText().toString().trim();
@@ -89,7 +94,12 @@ public class Authentication extends AppCompatActivity {
                                         mEditor.commit();
                                         Toast.makeText(Authentication.this, "Logged in", Toast.LENGTH_SHORT).show();
                                         startActivity(i);
+<<<<<<< HEAD
 
+=======
+                                     //  startActivity(new Intent(Authentication.this,ProfileActivity.class));
+                                        // startActivity(new Intent(Authentication.this,MainActivity.class));
+>>>>>>> origin/master
                                         finish();
                                     }
                                     if(mProgressDialog != null)
@@ -107,8 +117,13 @@ public class Authentication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+<<<<<<< HEAD
                // mProgressDialog.setTitle("Signing In...");
                 mProgressDialog.show(Authentication.this,"Signing In....","Processing....",true);
+=======
+                mProgressDialog.setTitle("Signing In...");
+                mProgressDialog.show();
+>>>>>>> origin/master
 
                 final String name = mNameEditText.getText().toString().trim();
                 final String mobileNo = mMobileNoEditText.getText().toString().trim();
@@ -127,7 +142,10 @@ public class Authentication extends AppCompatActivity {
                                     }else{
                                         //user exists
                                         mDatabaseReference.child("users").child(mobileNo).child("name").setValue(name);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
                                         mEditor.clear();
                                         mEditor.putString(KEY_MOBILE_NUMBER, mobileNo);
                                         mEditor.putString(KEY_NAME,name);

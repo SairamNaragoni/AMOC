@@ -1,5 +1,6 @@
 package com.example.onlinetreasurehunt2;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,10 +21,18 @@ public class GameOver extends AppCompatActivity {
     DatabaseReference databaseData;
 
     TextView mfinalScore;
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class GameOver extends AppCompatActivity {
+
+>>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
+<<<<<<< HEAD
 
         mfinalScore = (TextView) findViewById(R.id.finalScore);
 
@@ -46,5 +55,7 @@ public class GameOver extends AppCompatActivity {
         startActivity(new Intent(GameOver.this, Authentication.class));
         finish();
 
+=======
+>>>>>>> origin/master
     }
 }

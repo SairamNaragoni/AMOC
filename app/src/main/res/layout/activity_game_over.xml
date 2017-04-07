@@ -12,14 +12,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
         android:layout_marginTop="58dp"
         android:text="GAME OVER"
         android:textSize="36sp" />
+=======
+        android:layout_marginTop="205dp"
+        android:text="GAME OVER"
+        android:textSize="30sp" />
+>>>>>>> origin/master
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:onClick="logout"
         android:text="LOGOUT"
         android:layout_below="@+id/finalScore"
@@ -44,4 +51,10 @@
         android:layout_below="@+id/game_over"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp" />
+=======
+        android:layout_below="@+id/game_over"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:text="LOGOUT" />
+>>>>>>> origin/master
 </RelativeLayout>

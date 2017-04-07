@@ -12,11 +12,15 @@
         android:id="@+id/relativeLayout"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="profile"
@@ -25,6 +29,14 @@
             android:textSize="50sp"
             tools:layout_editor_absoluteX="112dp"
             tools:layout_editor_absoluteY="94dp" />
+=======
+            android:text="profile"
+            android:textSize="50sp"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="94dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+>>>>>>> origin/master
 
         <TextView
             android:id="@+id/emailProfile"
@@ -33,13 +45,17 @@
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:text="Email"
+<<<<<<< HEAD
             android:textAlignment="center"
             android:textColor="@android:color/black"
+=======
+>>>>>>> origin/master
             android:textSize="35sp"
             tools:layout_editor_absoluteX="106dp"
             tools:layout_editor_absoluteY="226dp" />
 
 
+<<<<<<< HEAD
         <EditText
             android:id="@+id/member1"
             android:layout_width="match_parent"
@@ -49,6 +65,18 @@
             android:inputType="textPersonName"
             android:layout_below="@+id/emailProfile"
             android:layout_alignParentStart="true" />
+=======
+    <EditText
+        android:id="@+id/member1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="member1"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/emailProfile"
+        android:layout_alignParentStart="true" />
+>>>>>>> origin/master
 
     <EditText
         android:id="@+id/member2"
