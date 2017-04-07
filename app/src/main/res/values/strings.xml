@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OnlineTreasureHunt</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="splash_tv_text">National Institute of technology</string>
+    <string name="action_settings">Logout</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
