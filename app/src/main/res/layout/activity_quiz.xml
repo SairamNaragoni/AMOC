@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/score_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/choice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/choice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/choice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/choice4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#B71C1C"
+        android:onClick="showMap"
+        android:text="quit"
+        android:textColor="#fff" />
+
+</LinearLayout>
