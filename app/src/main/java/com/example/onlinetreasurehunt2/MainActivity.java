@@ -1,21 +1,14 @@
 package com.example.onlinetreasurehunt2;
 
-<<<<<<< HEAD
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
-=======
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
->>>>>>> origin/master
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,13 +18,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
-=======
->>>>>>> origin/master
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,7 +31,6 @@ public class MainActivity extends AppCompatActivity
     public static final String IS_LOGIN = "is_logged_in";
     public static final String KEY_MOBILE_NUMBER = "user_mobile_number";
     public static final String KEY_NAME = "user_name";
-<<<<<<< HEAD
 
     int PRIVATE_MODE = 0;
     private TextView textName, textMobileNo;
@@ -48,20 +38,15 @@ public class MainActivity extends AppCompatActivity
 
     private View navHeader;
     public static String q;
+    public static int timeRemaining;
     private SharedPreferences mPref;
     static SharedPreferences.Editor mEditor;
-=======
-    int PRIVATE_MODE = 0;
-    private SharedPreferences mPref;
-    private SharedPreferences.Editor mEditor;
->>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
         navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         navHeader = navigationView.getHeaderView(0);
@@ -78,13 +63,6 @@ public class MainActivity extends AppCompatActivity
 
 
 
-=======
-        mPref = getApplicationContext().getSharedPreferences(PREF_NAME, PRIVATE_MODE);
-        mEditor = mPref.edit();
-
-        String isLoggedIn = mPref.getString(IS_LOGIN, null);
-
->>>>>>> origin/master
         if (isLoggedIn == null) {
             startActivity(new Intent(this, Authentication.class));
             finish();
@@ -95,19 +73,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-<<<<<<< HEAD
        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Developed by ShivaRaju and SandeepVerma", Snackbar.LENGTH_LONG)
-=======
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
->>>>>>> origin/master
                         .setAction("Action", null).show();
             }
         });
@@ -120,7 +90,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-<<<<<<< HEAD
 
         loadNavHeader();
 
@@ -137,17 +106,33 @@ public class MainActivity extends AppCompatActivity
         textMobileNo.setText(mPref.getString(KEY_MOBILE_NUMBER, null));
     }
 
-    public void startGame(View view){
+    public void timerStart(){
 
-        Intent i = new Intent(this,Quiz_Activity.class);
+        new CountDownTimer(180000+100, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
 
+                timeRemaining = (int) (millisUntilFinished/1000);
+            }
 
-=======
+            @Override
+            public void onFinish() {
+
+                Intent i= new Intent(getApplicationContext(),GameOver.class);
+                startActivity(i);
+                Toast.makeText(MainActivity.this, "Done!!", Toast.LENGTH_SHORT).show();
+
+            }
+        }.start();
     }
+
     public void startGame(View view){
 
+
+        timerStart();
         Intent i = new Intent(this,Quiz_Activity.class);
->>>>>>> origin/master
+
+
         startActivity(i);
     }
 
@@ -157,20 +142,7 @@ public class MainActivity extends AppCompatActivity
         startActivity(i);
     }
 
-<<<<<<< HEAD
 
-=======
-    public void logOut (View view){
-
-        mEditor.clear();
-        mEditor.commit();
-        startActivity(new Intent(MainActivity.this, Authentication.class));
-        finish();
-
-       // Intent i = new Intent(this,ReaderActivity.class);
-        //startActivity(i);
-    }
->>>>>>> origin/master
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -197,14 +169,11 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-<<<<<<< HEAD
 
             mEditor.clear();
             mEditor.commit();
             startActivity(new Intent(MainActivity.this, Authentication.class));
             finish();
-=======
->>>>>>> origin/master
             return true;
         }
 
@@ -217,27 +186,9 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-<<<<<<< HEAD
+        if (id == R.id.nav_rules) {
 
-=======
->>>>>>> origin/master
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-<<<<<<< HEAD
-            Intent i = new Intent(this,Quiz_Activity.class);
-            startActivity(i);
-=======
->>>>>>> origin/master
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -2,10 +2,12 @@ package com.example.onlinetreasurehunt2;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
@@ -24,8 +26,13 @@ public class ReaderActivity extends AppCompatActivity {
     public Firebase mqrAnswer;
     public String Mqranswer;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reader);
         scan_btn = (Button) findViewById(R.id.scan_btn);
@@ -42,7 +49,11 @@ public class ReaderActivity extends AppCompatActivity {
                 integrator.initiateScan();
             }
         });
+
+
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -52,23 +63,14 @@ public class ReaderActivity extends AppCompatActivity {
             if (result.getContents() == null){
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
             }else {
-<<<<<<< HEAD
 
                  b = Quiz_Activity.mQuestionNumber;
                // Toast.makeText(this, b.toString(), Toast.LENGTH_SHORT).show();
                 mqrAnswer= new Firebase("https://onlinetreasurehunt2.firebaseio.com/Quiz_Questions/" +b+ "/qrAnswer");
-=======
-                Toast.makeText(this,result.getContents() + "1245678", Toast.LENGTH_LONG).show();
-                //Toast.makeText(this,Quiz_Activity.mQuestionNumber, Toast.LENGTH_SHORT).show();
-                 b = Quiz_Activity.mQuestionNumber;
-                Toast.makeText(this, b.toString(), Toast.LENGTH_SHORT).show();
-                mqrAnswer= new Firebase("https://onlinetreasurehunt2.firebaseio.com/Quiz_Questions/" +(b-1)+ "/qrAnswer");
->>>>>>> origin/master
                 mqrAnswer.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Mqranswer = dataSnapshot.getValue(String.class);
-<<<<<<< HEAD
 
                         if (Objects.equals(a, Mqranswer)){
 
@@ -81,18 +83,6 @@ public class ReaderActivity extends AppCompatActivity {
                                 startActivity(i2);
                             }
                             } else{
-=======
-                        Toast.makeText(ReaderActivity.this,a + "1", Toast.LENGTH_SHORT).show();
-                        Toast.makeText(ReaderActivity.this,Mqranswer + "2", Toast.LENGTH_SHORT).show();
-                        if (Objects.equals(a, Mqranswer)){
-                            Toast.makeText(ReaderActivity.this, "lol", Toast.LENGTH_SHORT).show();
-                            //Quiz_Activity.mQuestionNumber -=1;
-                            Toast.makeText(ReaderActivity.this,Integer.toString(Quiz_Activity.mQuestionNumber), Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(ReaderActivity.this,Quiz_Activity.class);
-                            startActivity(i);
-
-                        }else{
->>>>>>> origin/master
                             Toast.makeText(ReaderActivity.this, "Go to correct place", Toast.LENGTH_SHORT).show();
                         }
                     }

@@ -1,6 +1,5 @@
 package com.example.onlinetreasurehunt2;
 
-<<<<<<< HEAD
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import static com.example.onlinetreasurehunt2.MainActivity.KEY_MOBILE_NUMBER;
 import static com.example.onlinetreasurehunt2.MainActivity.mEditor;
 import static com.example.onlinetreasurehunt2.MainActivity.q;
+import static com.example.onlinetreasurehunt2.MainActivity.timeRemaining;
 
 
 public class GameOver extends AppCompatActivity {
@@ -21,18 +21,10 @@ public class GameOver extends AppCompatActivity {
     DatabaseReference databaseData;
 
     TextView mfinalScore;
-=======
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-public class GameOver extends AppCompatActivity {
-
->>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
-<<<<<<< HEAD
 
         mfinalScore = (TextView) findViewById(R.id.finalScore);
 
@@ -42,11 +34,17 @@ public class GameOver extends AppCompatActivity {
 
         String ms= mfinalScore.getText().toString().trim();
 
+
+
         databaseData.child(q).child("score").setValue(ms);
+        databaseData.child(q).child("time left").setValue(timeRemaining);
     }
 
 
-
+    @Override
+    public void onBackPressed() {
+        // do nothing.
+    }
 
 
     public void logout(View view){
@@ -55,7 +53,5 @@ public class GameOver extends AppCompatActivity {
         startActivity(new Intent(GameOver.this, Authentication.class));
         finish();
 
-=======
->>>>>>> origin/master
     }
 }

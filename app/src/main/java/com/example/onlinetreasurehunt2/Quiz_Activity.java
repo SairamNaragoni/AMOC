@@ -1,12 +1,10 @@
 package com.example.onlinetreasurehunt2;
 
-<<<<<<< HEAD
 import android.app.ProgressDialog;
-=======
->>>>>>> origin/master
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,10 +17,7 @@ import com.example.onlinetreasurehunt2.MapsActivity;
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
-<<<<<<< HEAD
 import com.firebase.client.FirebaseApp;
-=======
->>>>>>> origin/master
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.firebase.client.snapshot.DoubleNode;
@@ -31,30 +26,25 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.security.PublicKey;
-<<<<<<< HEAD
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static com.example.onlinetreasurehunt2.R.id.finalScore;
 import static com.example.onlinetreasurehunt2.R.id.score_text;
-=======
->>>>>>> origin/master
 
 
 public class Quiz_Activity extends AppCompatActivity implements ValueEventListener {
 
     public TextView mScoreView;
     public TextView mQuestion;
-<<<<<<< HEAD
+    public TextView timer;
     public static int m = 0;
-=======
->>>>>>> origin/master
 
 
     public Double latitude, longitude;
     public LatLng fromPosition;
     public Button mButtonChoice1,mButtonChoice2,mButtonChoice3,mButtonChoice4,mButtonQuit;
 
-<<<<<<< HEAD
     public static int mQuestionNumber=0;
     public static int mScore=1000;
     public String mAnswer;
@@ -67,13 +57,6 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
     public Firebase mAnswerRef;
     public Firebase mLat;
     public Firebase mlong;
-=======
-    public static int mQuestionNumber= 0;
-    public int mScore=0;
-    public String mAnswer;
-
-    public Firebase mQuestionRef,mchoice1Ref,mchoice2Ref,mchoice3Ref,mchoice4Ref,mAnswerRef,mLat,mlong;
->>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,13 +65,10 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
         setContentView(R.layout.activity_quiz);
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         mScoreView = (TextView) findViewById(R.id.score);
         mQuestion = (TextView) findViewById(R.id.question);
-
+       timer =(TextView)findViewById(R.id.timer);
         mButtonChoice1 = (Button) findViewById(R.id.choice1);
         mButtonChoice2 = (Button) findViewById(R.id.choice2);
         mButtonChoice3 = (Button) findViewById(R.id.choice3);
@@ -97,9 +77,23 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
 
         longitude = 0.0;
         latitude = 0.0;
-<<<<<<< HEAD
         updateQuestion();
         loadScore();
+
+        new CountDownTimer(180000,1000){
+
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                timer.setText(Integer.toString(MainActivity.timeRemaining));
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
         //loadScore();
         if (m==0) {
             final ProgressDialog progressDialog = ProgressDialog.show(this, "Getting Questions from firebase....", "Please wait....", true);
@@ -120,10 +114,6 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
 
 
 
-=======
-
-        updateQuestion();
->>>>>>> origin/master
 
         //button1
 
@@ -132,7 +122,6 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
             @Override
             public void onClick(View view) {
                 if (mButtonChoice1.getText().equals(mAnswer)){
-<<<<<<< HEAD
                     mScore = mScore + 100;
                     updateScore(mScore);
                     loadScore();
@@ -140,22 +129,13 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
                     m++;
 
                     // updateQuestion();
-=======
-                    mScore = mScore + 1;
-                    updateScore(mScore);
-                    map();
-                   // updateQuestion();
->>>>>>> origin/master
 
                     Toast.makeText(Quiz_Activity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(Quiz_Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
                     mScore = mScore - 50;
                     loadScore();
-=======
->>>>>>> origin/master
                     //updateQuestion();
                 }
             }
@@ -167,28 +147,19 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
             @Override
             public void onClick(View v) {
                 if (mButtonChoice2.getText().equals(mAnswer)){
-<<<<<<< HEAD
                     mScore = mScore + 100;
                     updateScore(mScore);
                     map();
                     loadScore();
                     m++;
 
-=======
-                    mScore = mScore + 1;
-                    updateScore(mScore);
-                    map();
->>>>>>> origin/master
                     //updateQuestion();
                     Toast.makeText(Quiz_Activity.this, "correct", Toast.LENGTH_SHORT).show();
                 }else {
                     //updateQuestion();
                     Toast.makeText(Quiz_Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
                     mScore = mScore - 50;
                     loadScore();
-=======
->>>>>>> origin/master
                 }
             }
         });
@@ -199,28 +170,19 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
             @Override
             public void onClick(View v) {
                 if (mButtonChoice3.getText().equals(mAnswer)){
-<<<<<<< HEAD
                     mScore = mScore + 100;
                     updateScore(mScore);
                     map();
                     loadScore();
                     m++;
 
-=======
-                    mScore = mScore + 1;
-                    updateScore(mScore);
-                    map();
->>>>>>> origin/master
                     //updateQuestion();
                     Toast.makeText(Quiz_Activity.this, "correct", Toast.LENGTH_SHORT).show();
                 }else {
                     //updateQuestion();
                     Toast.makeText(Quiz_Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
                     mScore = mScore - 50;
                     loadScore();
-=======
->>>>>>> origin/master
                 }
             }
         });
@@ -231,28 +193,19 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
             @Override
             public void onClick(View v) {
                 if (mButtonChoice4.getText().equals(mAnswer)){
-<<<<<<< HEAD
                     mScore = mScore + 100;
                     updateScore(mScore);
                     map();
                     m++;
                     loadScore();
 
-=======
-                    mScore = mScore + 1;
-                    updateScore(mScore);
-                    map();
->>>>>>> origin/master
                     //updateQuestion();
                     Toast.makeText(Quiz_Activity.this, "correct", Toast.LENGTH_SHORT).show();
                 }else {
                     //updateQuestion();
                     Toast.makeText(Quiz_Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
                     mScore = mScore - 50;
                     loadScore();
-=======
->>>>>>> origin/master
                 }
             }
         });
@@ -270,24 +223,22 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
 
     }
 
-<<<<<<< HEAD
     private void loadScore() {
         mScoreView.setText(Integer.toString(mScore));
     }
 
+    @Override
+    public void onBackPressed() {
+        // do nothing.
 
-=======
->>>>>>> origin/master
+    }
     private void updateScore(int score){
         mScoreView.setText("" + mScore);
     }
 
     public void map() {
 
-<<<<<<< HEAD
         mQuestionNumber--;
-=======
->>>>>>> origin/master
         mLat = new Firebase("https://onlinetreasurehunt2.firebaseio.com/Quiz_Questions/"+ mQuestionNumber +"/latitutde");
         mLat.addValueEventListener(this);
 
@@ -389,14 +340,10 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
-<<<<<<< HEAD
         //Toast.makeText(this, "Ondatachange", Toast.LENGTH_SHORT).show();
         if (dataSnapshot.getValue() != null) {
 
            // Toast.makeText(this, "datasnapshot", Toast.LENGTH_SHORT).show();
-=======
-        if (dataSnapshot.getValue() != null) {
->>>>>>> origin/master
             switch (dataSnapshot.getKey()) {
                 case "latitutde":
                     latitude = Double.parseDouble(dataSnapshot.getValue().toString());
@@ -409,26 +356,18 @@ public class Quiz_Activity extends AppCompatActivity implements ValueEventListen
             fromPosition = new LatLng(latitude,longitude);
 
             if (latitude != 0.0 && longitude != 0.0) {
-<<<<<<< HEAD
               //  Toast.makeText(this, "if part", Toast.LENGTH_SHORT).show();
                 startMapActivity();
             }
             else {
               //  Toast.makeText(this, "else part", Toast.LENGTH_SHORT).show();
             }
-=======
-                startMapActivity();
-            }
->>>>>>> origin/master
         }
     }
 
     private void startMapActivity() {
         Bundle args = new Bundle();
-<<<<<<< HEAD
        // Toast.makeText(this, "try this", Toast.LENGTH_SHORT).show();
-=======
->>>>>>> origin/master
         args.putParcelable("longLat_dataProvider", fromPosition);
 
         Intent i = new Intent(getApplicationContext(), MapsActivity.class);

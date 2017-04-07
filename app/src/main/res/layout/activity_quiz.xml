@@ -27,6 +27,17 @@
             android:text="100"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="30sp"
+            android:layout_marginStart="96dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@+id/score_text" />
+
     </RelativeLayout>
 
     <TextView

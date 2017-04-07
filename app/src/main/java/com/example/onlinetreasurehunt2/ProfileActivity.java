@@ -79,28 +79,18 @@ public class ProfileActivity extends AppCompatActivity {
 
         int flag=0;
         team= teamname.getText().toString().trim();
-<<<<<<< HEAD
         Intent i2 = new Intent(this,MainActivity.class);
         i2.putExtra("team",team);
 
-=======
->>>>>>> origin/master
         if (!TextUtils.isEmpty(team)){
 
             String id=databaseData.push().getKey();
             //Data msg = new Data(id,team);
            // databaseData.child("details").push().setValue(msg);
-<<<<<<< HEAD
             //Toast.makeText(this, "Data added team", Toast.LENGTH_SHORT).show();
             flag++;
         }else{
             Toast.makeText(this, "enter team name", Toast.LENGTH_SHORT).show();
-=======
-            Toast.makeText(this, "Data added team", Toast.LENGTH_SHORT).show();
-            flag++;
-        }else{
-            Toast.makeText(this, "enter name team", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
         }
 
 
@@ -110,17 +100,10 @@ public class ProfileActivity extends AppCompatActivity {
             String id1=databaseData.push().getKey();
             Data msg = new Data(id1,m1);
             databaseData.child(mobileNo).child(team).child("member1").setValue(m1);
-<<<<<<< HEAD
            // Toast.makeText(this, "Data added1", Toast.LENGTH_SHORT).show();
             flag++;
         }else{
             Toast.makeText(this, "enter member 1 name", Toast.LENGTH_SHORT).show();
-=======
-            Toast.makeText(this, "Data added1", Toast.LENGTH_SHORT).show();
-            flag++;
-        }else{
-            Toast.makeText(this, "enter name1", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
         }
 
         String m2= member2.getText().toString().trim();
@@ -129,17 +112,10 @@ public class ProfileActivity extends AppCompatActivity {
             String id2=databaseData.push().getKey();
             Data msg = new Data(id2,m2);
             databaseData.child(mobileNo).child(team).child("member2").setValue(m2);
-<<<<<<< HEAD
             //Toast.makeText(this, "Data added2", Toast.LENGTH_SHORT).show();
             flag++;
         }else{
             Toast.makeText(this, "enter member 2 name", Toast.LENGTH_SHORT).show();
-=======
-            Toast.makeText(this, "Data added2", Toast.LENGTH_SHORT).show();
-            flag++;
-        }else{
-            Toast.makeText(this, "enter name2", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
         }
 
         String m3= member3.getText().toString().trim();
@@ -148,17 +124,10 @@ public class ProfileActivity extends AppCompatActivity {
             String id=databaseData.push().getKey();
             Data msg = new Data(id,m3);
             databaseData.child(mobileNo).child(team).child("member3").setValue(m3);
-<<<<<<< HEAD
             //Toast.makeText(this, "Data added3", Toast.LENGTH_SHORT).show();
             flag++;
         }else{
             Toast.makeText(this, "enter member 3 name", Toast.LENGTH_SHORT).show();
-=======
-            Toast.makeText(this, "Data added3", Toast.LENGTH_SHORT).show();
-            flag++;
-        }else{
-            Toast.makeText(this, "enter name3", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
         }
 
         String m4= member4.getText().toString().trim();
@@ -167,17 +136,10 @@ public class ProfileActivity extends AppCompatActivity {
             String id=databaseData.push().getKey();
             Data msg = new Data(id,m4);
             databaseData.child(mobileNo).child(team).child("member4").setValue(m4);
-<<<<<<< HEAD
             //Toast.makeText(this, "Data added4", Toast.LENGTH_SHORT).show();
             flag++;
         }else{
             Toast.makeText(this, "enter member 4 name", Toast.LENGTH_SHORT).show();
-=======
-            Toast.makeText(this, "Data added4", Toast.LENGTH_SHORT).show();
-            flag++;
-        }else{
-            Toast.makeText(this, "enter name4", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
         }
 
 

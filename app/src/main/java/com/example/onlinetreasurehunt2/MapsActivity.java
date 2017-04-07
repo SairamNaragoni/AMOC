@@ -10,6 +10,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +18,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -35,6 +37,7 @@ import java.util.Locale;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     public static GoogleMap mMap;
+    public TextView mapTimer;
     private float mapZoomLevel;
     LatLng defaultLoc , ll;
 
@@ -88,6 +91,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mapTimer = (TextView)findViewById(R.id.mapTimer);
+        new CountDownTimer(180000,1000){
+
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                mapTimer.setText(Integer.toString(MainActivity.timeRemaining));
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
         Intent i = getIntent();
@@ -100,11 +118,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             defaultLoc = new LatLng(ll.latitude, ll.longitude);
             mMap.addMarker(new MarkerOptions().position(defaultLoc).title("come here").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
            // Toast.makeText(this, Double.toString(ll.latitude), Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLoc, 15));
-=======
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLoc, 18));
->>>>>>> origin/master
 
 
         }
@@ -115,29 +129,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-<<<<<<< HEAD
 
-=======
-                // Toast.makeText(MapsActivity.this, location.toString(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(MapsActivity.this, "Location Obtained", Toast.LENGTH_SHORT).show();
-                // Add a marker in Sydney and move the camera
->>>>>>> origin/master
                 LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
                 mMap.clear();
                 mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location"));
 
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(userLocation));
-<<<<<<< HEAD
 
                 mMap.addMarker(new MarkerOptions().position(defaultLoc).title("come here").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLoc, 15));
-=======
-                mapZoomLevel = 13;
-                mMap.addMarker(new MarkerOptions().position(defaultLoc).title("come here").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-               // Toast.makeText(MapsActivity.this,ll.latitude+ "fuck u", Toast.LENGTH_SHORT).show();
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLoc, 18));
->>>>>>> origin/master
 
 
 
@@ -172,11 +173,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             address+=listAddresses.get(0).getCountryName()+" ";
                         }
 
-<<<<<<< HEAD
 
-=======
-                        Toast.makeText(MapsActivity.this, address, Toast.LENGTH_LONG).show();
->>>>>>> origin/master
                     }
                 }
                 catch (IOException e) {
@@ -226,11 +223,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 else
                 {
-<<<<<<< HEAD
                   //  Toast.makeText(MapsActivity.this, "obtaining Location", Toast.LENGTH_SHORT).show();
-=======
-                    Toast.makeText(MapsActivity.this, "obtaining Location", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
                     LatLng svnit1 = new LatLng(21.167670, 72.785091);
                     //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
                     mMap.addMarker(new MarkerOptions().position(svnit1).title("SVNIT").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
