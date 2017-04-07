@@ -1,3 +1,6 @@
-# AMOC
-Are you bored of playing treasure hunt in your college?
-We brought a interesting Android game application which is a virtual playing of treasure hunt online.
+ # AMOC
+ (ACM Month Of Code)
+ Bored of playing Conventional treasure hunt in your college?
+ Well , Here is the brand new Android Online treasure hunt Application.
+ 
+ 
